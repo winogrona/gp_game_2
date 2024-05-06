@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100..900&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <script src="/res/main.js"></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div id="enter_your_name" class="screen">
+      <div id="title">
+        <h1 id="title_input_name">WPROWADŹ IMIĘ</h1>
+      </div>
+      <input id="input_name" placeholder="MAM NA IMIE...">
+      <button class="black_button" onclick="register()">KONTYNUUJ</button>
+    </div>
+
+    <div id="waiting_for_the_next_question_screen" class="screen">
+      <img src="/res/loading.png" class="loading_cat">
+
+      <p id="your_name"></p><br>
+      <div id="correct_answer">Poprawna odpowiez'!</div>
+      <div id="incorrect_answer">Niepoprawna odpowiedz'</div>
+      <p>Masz </p><p id="your_score"></p><p> punktów</p>
+      <p>proszę poczekać na następne pytanie</p>
+    </div>
+
+    <div id="guess_screen" class="screen">
+    </div>
+
+    <div id="waiting_to_start_the_game" class="screen">
+      <img src="/res/loading.png" class="loading_cat">
+      <p id="your_name"></p>
+      <p>proszę poczekać na początek gry</p>
+      <button class="black_button" id="unregister_button" onclick="unregister()">WPROWADŹ IMIĘ PONOWNIE</button>
+    </div>
+
+    <div id="loading_screen" class="screen" style="display: flex;">
+      <img src="/res/loading.png" class="loading_cat">
+
+      <p>Trwa ładowanie</p>
+    </div>
+  </body>
+</html>
+
+<script>
+  reconnect();
+</script>
